@@ -1,16 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgAisModule } from 'angular-instantsearch';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { Error404Component } from './components/errors/error404/error404.component';
+import { PokedexComponent } from './components/pokedex/pokedex.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PokemonComponent,
+    NavbarComponent,
+    Error404Component,
+    PokedexComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    NgAisModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

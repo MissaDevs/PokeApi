@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bug {
+  background: #aedf78;
+}
+
+.water {
+  background: #43ccff;
+}
+
+.grass {
+  background: #00ca91;
+}
+
+.fire {
+  background: #e95c4d;
+}
+
+.normal {
+  background: #a5a5a5;
+}
+
+.poison,
+.psychic {
+  background: rgb(168 85 247);
+}
+
+.electric {
+  background: rgb(234 179 8);
+}
+
+.fairy {
+  background-color: rgb(244 63 94);
+}
+
+.ground,
+.rock {
+  background-color: rgb(120 113 108);
+}
+
+.fighting {
+  background-color: rgb(239 68 68);
+}
+
+.ghost {
+  background-color: rgb(100 116 139);
+}
+
+.ice {
+  background-color: rgb(59 130 246);
+}
+
+.dragon {
+  background-color: rgb(14 165 233);
+}
