@@ -4,6 +4,7 @@ import { PokeapiService } from 'src/app/services/pokeapi.service';
 import { environment } from 'src/environments/environment';
 import algoliasearch from 'algoliasearch';
 
+
 const options = environment.algolia;
 const searchClient = algoliasearch(options.appId,options.apiKey);
 

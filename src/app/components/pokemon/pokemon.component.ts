@@ -21,8 +21,6 @@ export class PokemonComponent implements OnInit {
   faRight = fontawesomeSolid.faChevronRight
 
   single: any[] = [];
-
-
   view1: [number, number] = [700, 400];
   view2: [number, number] = [400, 350];
 

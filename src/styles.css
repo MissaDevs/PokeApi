@@ -21,8 +21,12 @@
 }
 
 .normal,
-.dark {
+.steel {
   background: #a5a5a5;
+}
+
+.dark {
+  background: #151515;
 }
 
 .poison,
