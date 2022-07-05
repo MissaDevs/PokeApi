@@ -18,8 +18,27 @@ export class PokemonComponent implements OnInit {
   faHeartSolid = fontawesomeSolid.faHeart
   faHeartRegular = fontawesomeRegular.faHeart
   faBack = fontawesomeSolid.faChevronLeft
+  faRight = fontawesomeSolid.faChevronRight
 
-  constructor(private poekeApi: PokeapiService ,private route: ActivatedRoute) { }
+  single: any[] = [];
+
+
+  view1: [number, number] = [700, 400];
+  view2: [number, number] = [400, 350];
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  showYAxisLabel = true;
+
+  colorScheme: any = {
+    domain: ['#5AA454', '#A10A28', '#AAAAAA', '#C7B42C', '#7c7c7c', '#17b4ed']
+  };
+
+  constructor(private poekeApi: PokeapiService ,private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.loadId()
@@ -45,6 +64,17 @@ export class PokemonComponent implements OnInit {
         moves: data.moves,
         id: data.id
       }
+
+      for (let i of data.stats) {
+        this.single.push({
+          name: i.stat.name,
+          value: i.base_stat
+        })
+      }
     })
+  }
+
+  getWeight(weight: number) {
+    return weight / 1000
   }
 }

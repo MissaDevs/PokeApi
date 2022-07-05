@@ -20,7 +20,8 @@
   background: #e95c4d;
 }
 
-.normal {
+.normal,
+.dark {
   background: #a5a5a5;
 }
 

@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "PokeApi"
+  "cli": {
+    "analytics": "af70c06f-9ca5-4a25-a2d2-32d112526d28"
+  }
 }

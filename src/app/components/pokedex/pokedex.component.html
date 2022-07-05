@@ -46,7 +46,7 @@
                     <div *ngFor="let pokemon of hits">
                       <div class="{{pokemon.type[0].type.name}} w-full h-32 rounded-3xl cursor-pointer grid grid-cols-2 relative hover:-translate-y-3 shadow-lg hover:shadow-xl transition-all" routerLink="/pokemon/{{pokemon.objectID}}">
                         <div class="grid grid-cols-1 ml-4 items-center text-start m-auto w-full">
-                          <p class="text-white float-left text-xl font-bold">{{upperCase(pokemon.name)}}</p>
+                          <p class="text-white float-left text-xl capitalize font-bold">{{pokemon.name}}</p>
                           <button *ngFor="let type of pokemon.type" class="h-6 w-16 mt-1 types rounded-2xl text-white">{{type.type.name}}</button>
                         </div>
                         <img src={{pokemon.image}} alt="" class="absolute -right-3 -bottom-5 w-24">
